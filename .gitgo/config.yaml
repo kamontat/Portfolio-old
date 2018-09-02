@@ -1,0 +1,4 @@
+version: 2
+log: true
+commit:
+  message: false

@@ -1,0 +1,4 @@
+version: 2
+list:
+  - key: config
+    value: Set config of Gatsby
