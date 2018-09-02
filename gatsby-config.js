@@ -1,9 +1,11 @@
 const isProduction = process.env.NODE_ENV === 'production'
 
+const version = require('./package.json').version
+
 module.exports = {
   siteMetadata: {
-    title: 'Website',
-    version: require('./package.json').version,
+    title: `Website (${version})`,
+    version: version,
   },
   plugins: [
     'gatsby-plugin-netlify-cms',

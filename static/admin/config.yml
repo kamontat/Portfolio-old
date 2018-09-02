@@ -1,7 +1,6 @@
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
 media_folder: static/uploads/images
 public_folder: /uploads/images
 collections:
@@ -9,11 +8,25 @@ collections:
     label: Education
     folder: src/_personal/education
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{position}}'
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - label: School Name
+        name: title
+        widget: string
+      - label: Course Name
+        name: course
+        widget: string
+      - label: Start date
+        name: start
+        widget: date
+        format: DD-MMM-YYYY
+      - label: End Date
+        name: end
+        widget: date
+        format: DD-MMM-YYYY
+      - label: Position
+        name: position
+        widget: number
+        valueType: int
+        required: false
+        default: 0
