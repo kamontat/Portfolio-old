@@ -1,6 +1,8 @@
 version: 2
 list:
   - key: config
-    value: Set config of Gatsby
+    value: Update configuration
   - key: lib
-    value: Managing about dependencies
+    value: Add, Change, Delete dependencies
+  - key: ui
+    value: Create new UI, Update or Delete UI
