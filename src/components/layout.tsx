@@ -1,12 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+
+import PropTypes from 'prop-types'
+
 import { StaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
-import './layout.css'
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-const Layout = ({ children, data }) => (
+import theme from "./theme"
+
+import Header from './header'
+import './layout.sass'
+
+const Layout: React.StatelessComponent = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,8 +34,12 @@ const Layout = ({ children, data }) => (
           ]}
         >
           <html lang="en" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"></link>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
         </Helmet>
+
         <Header siteTitle={data.site.siteMetadata.title} />
+
         <div
           style={{
             margin: '0 auto',
@@ -37,7 +48,12 @@ const Layout = ({ children, data }) => (
             paddingTop: 0,
           }}
         >
-          {children}
+          <MuiThemeProvider theme={theme}>
+            <CssBaseline />
+
+            {children}
+
+          </MuiThemeProvider>
         </div>
       </>
     )}

@@ -3,6 +3,13 @@ The default Gatsby starter.
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
+## Dependencies
+
+1. React: https://reactjs.org
+2. Gatsby: https://www.gatsbyjs.org
+3. Material UI: https://material-ui.com
+4. Netlify: https://www.netlify.com
+
 ## Install
 
 Make sure that you have the Gatsby CLI program installed:

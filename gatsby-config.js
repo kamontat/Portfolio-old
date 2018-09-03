@@ -11,6 +11,7 @@ module.exports = {
     'gatsby-plugin-netlify-cms',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
+    'gatsby-plugin-typescript',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

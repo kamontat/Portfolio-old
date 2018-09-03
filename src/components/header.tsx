@@ -1,7 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
+interface HeaderA {
+  siteTitle: string,
+}
+
+const Header: React.StatelessComponent<HeaderA> = ({ siteTitle }) => (
   <div
     style={{
       background: 'rebeccapurple',
@@ -29,5 +35,9 @@ const Header = ({ siteTitle }) => (
     </div>
   </div>
 )
+
+Header.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
+}
 
 export default Header
