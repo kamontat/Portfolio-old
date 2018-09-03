@@ -2,3 +2,5 @@ version: 2
 list:
   - key: config
     value: Set config of Gatsby
+  - key: lib
+    value: Managing about dependencies
