@@ -4809,6 +4809,12 @@ gatsby-plugin-emotion@2.0.0-rc.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-jss@2.0.2-rc.1:
+  version "2.0.2-rc.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-jss/-/gatsby-plugin-jss-2.0.2-rc.1.tgz#3dd24d4ff698c58f0b2231ad224c804b37d2b643"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-manifest@2.0.2-rc.1:
   version "2.0.2-rc.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.2-rc.1.tgz#635cf3febe64b2d6420d6e6bbf3ade660dd5288a"

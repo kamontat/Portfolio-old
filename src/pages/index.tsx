@@ -4,7 +4,8 @@ import Button from '@material-ui/core/Button'
 
 // import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/layout/Layout'
+import withRoot from '../withRoot';
 
 const IndexPage = () => (
   <Layout>
@@ -19,4 +20,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default withRoot(IndexPage)

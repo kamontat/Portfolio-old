@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-jss',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -34,7 +35,7 @@ module.exports = {
     }, {
       resolve: `gatsby-plugin-sass`,
       options: {
-        // precision: 8,
+        precision: 8,
       },
     },
   ],

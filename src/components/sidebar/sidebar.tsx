@@ -13,15 +13,15 @@ import { ChevronLeft, Inbox, Drafts, Star, Mail, Send, Delete, Report } from '@m
 
 interface SidebarProp {
   classes: any
-  width: number
   open: boolean
   onClose: (event: MouseEvent<HTMLElement>) => void
 }
 
+const drawerWidth = 240;
 const styles = (theme: Theme) => createStyles({
   drawerPaper: {
     whiteSpace: 'nowrap',
-    width: 240,
+    width: drawerWidth,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -103,9 +103,9 @@ class Sidebar extends React.Component<SidebarProp> {
         <Divider />
         <List>
           {
-            section1.map(function (each) {
+            section1.map((each, index) => {
               return (
-                <ListItem button>
+                <ListItem key={"1" + index} button>
                   <ListItemIcon>
                     <each.icon />
                   </ListItemIcon>
@@ -118,9 +118,9 @@ class Sidebar extends React.Component<SidebarProp> {
         <Divider />
         <List>
           {
-            section2.map(function (each) {
+            section2.map((each, index) => {
               return (
-                <ListItem button>
+                <ListItem key={"2" + index} button>
                   <ListItemIcon>
                     <each.icon />
                   </ListItemIcon>
