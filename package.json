@@ -1,8 +1,16 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "portfolio",
+  "description": "Personal website for Kc & Nt",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": {
+    "name": "Kamontat Chantrachirathumrong",
+    "email": "kamontat.c@hotmail.com",
+    "url": "http://kamontat.space"
+  },
+  "contributors": [{
+    "name": "Natcha Triratchatchawan",
+    "email": "pprangnt.0512@gmail.com",
+  }],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "5.1.0-11",
@@ -43,7 +51,11 @@
     "rimraf": "2.6.2"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "react",
+    "website",
+    "personal",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {

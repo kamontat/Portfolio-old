@@ -1,7 +1,8 @@
 /* eslint-disable react/no-danger */
+import { _emotionServer } from 'emotion-server';
 
 const React = require('react')
-const { _server, renderToString } = require('react-dom/server')
+const { renderToString } = require('react-dom/server')
 const { JssProvider } = require('react-jss')
 const getPageContext = require('./src/context')
 
@@ -15,21 +16,18 @@ exports.replaceRenderer = function ({ bodyComponent, replaceBodyHTMLString, setH
   // Ternary to support Gatsby@1 and Gatsby@2 at the same time.
   const muiPageContext = getPageContext.default ? getPageContext.default() : getPageContext();
 
-  const _extractCritical = (0, _emotionServer.extractCritical)((0, _server.renderToString)(bodyComponent)),
-    html = _extractCritical.html,
-    ids = _extractCritical.ids,
-    css = _extractCritical.css;
-
-  const bodyHTML = renderToString(
+  const FullReactElement = (
     <JssProvider
       registry={muiPageContext.sheetsRegistry}
       generateClassName={muiPageContext.generateClassName}
     >
-      {React.cloneElement(html, {
+      {React.cloneElement(bodyComponent, {
         muiPageContext,
       })}
-    </JssProvider>,
-  );
+    </JssProvider>
+  )
+
+  const { html, ids, css } = _emotionServer.extractCritical(renderToString(FullReactElement));
 
   const criticalStyle = _react.default.createElement("style", {
     dangerouslySetInnerHTML: {
@@ -52,6 +50,6 @@ exports.replaceRenderer = function ({ bodyComponent, replaceBodyHTMLString, setH
     }
   });
 
-  replaceBodyHTMLString(bodyHTML);
-  setHeadComponents([criticalStyle, criticalIds, materialStyle]);
+  replaceBodyHTMLString(html);
+  setHeadComponents([materialStyle, criticalStyle, criticalIds]);
 }

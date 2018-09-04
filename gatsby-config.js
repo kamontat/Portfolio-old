@@ -1,10 +1,11 @@
 const isProduction = process.env.NODE_ENV === 'production'
 
+const name = require('./package.json').name
 const version = require('./package.json').version
 
 module.exports = {
   siteMetadata: {
-    title: `Website (${version})`,
+    title: `${name} (${version})`,
     version: version,
   },
   plugins: [
