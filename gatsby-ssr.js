@@ -1,22 +1,21 @@
 /* eslint-disable react/no-danger */
-import { createStyles } from '@material-ui/core/styles';
 
-const React = require('react');
-const { renderToString } = require('react-dom/server');
-const { JssProvider } = require('react-jss');
-const getPageContext = require('./src/context');
+const React = require('react')
+const { _server, renderToString } = require('react-dom/server')
+const { JssProvider } = require('react-jss')
+const getPageContext = require('./src/context')
 
-const _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-const _react = _interopRequireDefault(require("react"));
-const _server = require("react-dom/server");
-const _emotionServer = require("emotion-server");
+const _interopRequireDefault = require('@babel/runtime/helpers/interopRequireDefault')
 
-function replaceRenderer({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) {
+const _emotionServer = require('emotion-server')
+const _react = _interopRequireDefault(require('react'))
+
+exports.replaceRenderer = function ({ bodyComponent, replaceBodyHTMLString, setHeadComponents }) {
   // Get the context of the page to collected side effects.
   // Ternary to support Gatsby@1 and Gatsby@2 at the same time.
   const muiPageContext = getPageContext.default ? getPageContext.default() : getPageContext();
 
-  var _extractCritical = (0, _emotionServer.extractCritical)((0, _server.renderToString)(bodyComponent)),
+  const _extractCritical = (0, _emotionServer.extractCritical)((0, _server.renderToString)(bodyComponent)),
     html = _extractCritical.html,
     ids = _extractCritical.ids,
     css = _extractCritical.css;
@@ -31,7 +30,6 @@ function replaceRenderer({ bodyComponent, replaceBodyHTMLString, setHeadComponen
       })}
     </JssProvider>,
   );
-  replaceBodyHTMLString(bodyHTML);
 
   const criticalStyle = _react.default.createElement("style", {
     dangerouslySetInnerHTML: {
@@ -54,7 +52,6 @@ function replaceRenderer({ bodyComponent, replaceBodyHTMLString, setHeadComponen
     }
   });
 
-  setHeadComponents([createStyles, criticalIds, materialStyle]);
+  replaceBodyHTMLString(bodyHTML);
+  setHeadComponents([criticalStyle, criticalIds, materialStyle]);
 }
-
-exports.replaceRenderer = replaceRenderer;
