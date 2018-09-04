@@ -9,7 +9,7 @@
   },
   "contributors": [{
     "name": "Natcha Triratchatchawan",
-    "email": "pprangnt.0512@gmail.com",
+    "email": "pprangnt.0512@gmail.com"
   }],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.0-14",

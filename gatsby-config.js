@@ -1,27 +1,21 @@
-const isProduction = process.env.NODE_ENV === 'production'
 
-const name = require('./package.json').name
-const version = require('./package.json').version
+const isProduction = process.env.NODE_ENV === 'production'
+const package = require("./package.json")
 
 module.exports = {
   siteMetadata: {
-    title: `${name} (${version})`,
-    version: version,
+    title: `${package.name} (${package.version})`,
+    version: package.version,
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
-    'gatsby-plugin-typescript',
-    'gatsby-plugin-jss',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: package.name,
+        short_name: package.name,
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#fff',
+        theme_color: '#fff',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
@@ -38,5 +32,10 @@ module.exports = {
         precision: 8,
       },
     },
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-jss',
   ],
 }

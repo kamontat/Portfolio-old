@@ -1,6 +1,4 @@
 /* eslint-disable react/no-danger */
-import { _emotionServer } from 'emotion-server';
-
 const React = require('react')
 const { renderToString } = require('react-dom/server')
 const { JssProvider } = require('react-jss')
