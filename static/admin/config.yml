@@ -29,6 +29,9 @@ collections:
               - label: Last name
                 name: last-name
                 widget: string
+          - label: Nickname
+            name: nickname
+            widget: string
           - label: Email
             name: email
             widget: string
@@ -36,9 +39,11 @@ collections:
             name: birthday
             widget: date
             format: DD-MMM-YYYY
+            required: false
           - label: Address
             name: address
             widget: text
+            required: false
           - label: Phone number
             name: phone
             widget: string
@@ -161,6 +166,8 @@ collections:
             value: internship
           - label: Part-time
             value: parttime
+          - label: Competition
+            value: competition
       - label: Image
         name: image
         widget: image
