@@ -7,10 +7,12 @@
     "email": "kamontat.c@hotmail.com",
     "url": "http://kamontat.space"
   },
-  "contributors": [{
-    "name": "Natcha Triratchatchawan",
-    "email": "pprangnt.0512@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Natcha Triratchatchawan",
+      "email": "pprangnt.0512@gmail.com"
+    }
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "5.1.0-11",
@@ -25,6 +27,7 @@
     "emotion-server": "9.2.6",
     "gatsby": "2.0.0-rc.8",
     "gatsby-plugin-emotion": "2.0.0-rc.1",
+    "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-jss": "2.0.2-rc.1",
     "gatsby-plugin-manifest": "2.0.2-rc.1",
     "gatsby-plugin-netlify-cms": "3.0.0-rc.1",
