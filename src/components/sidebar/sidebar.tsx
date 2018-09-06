@@ -1,9 +1,7 @@
 import React, { MouseEvent } from 'react'
 import classNames from 'classnames'
 
-import { withStyles, createStyles } from '@material-ui/core/styles'
-
-import { Theme } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
 
 import { Drawer } from '@material-ui/core'
 import { List, ListItem, ListItemIcon, ListItemText, Divider } from '@material-ui/core'
@@ -11,41 +9,13 @@ import { IconButton } from '@material-ui/core'
 
 import { ChevronLeft, Inbox, Drafts, Star, Mail, Send, Delete, Report } from '@material-ui/icons'
 
+import Style from './sidebar.style'
+
 interface SidebarProp {
   classes: any
   open: boolean
   onClose: (event: MouseEvent<HTMLElement>) => void
 }
-
-const drawerWidth = 240;
-const styles = (theme: Theme) => createStyles({
-  drawerPaper: {
-    whiteSpace: 'nowrap',
-    width: drawerWidth,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerPaperClose: {
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    width: theme.spacing.unit * 7,
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing.unit * 9,
-    },
-  },
-  toolbar: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-})
 
 class Sidebar extends React.Component<SidebarProp> {
   render() {
@@ -135,4 +105,4 @@ class Sidebar extends React.Component<SidebarProp> {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Sidebar)
+export default Style(Sidebar)
