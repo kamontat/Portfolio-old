@@ -5,7 +5,7 @@ import { Theme } from '@material-ui/core'
 
 const drawerWidth = 240;
 
-const style = (theme: Theme) => createStyles({
+const styles = (theme: Theme) => createStyles({
   drawerPaper: {
     whiteSpace: 'nowrap',
     width: drawerWidth,
@@ -34,6 +34,4 @@ const style = (theme: Theme) => createStyles({
   },
 })
 
-export default (container: React.ComponentClass) => {
-  return withStyles(style, { withTheme: true })(container)
-}
+export default withStyles(styles, { withTheme: true })

@@ -3,8 +3,7 @@ import classNames from 'classnames'
 
 import { Link } from 'gatsby'
 
-import { Theme, Typography } from '@material-ui/core';
-import { withStyles, createStyles } from '@material-ui/core/styles';
+import { Theme } from '@material-ui/core';
 
 import { AppBar, Toolbar } from '@material-ui/core';
 
@@ -15,34 +14,13 @@ import { Brightness6, Menu } from '@material-ui/icons'
 import Sidebar from '../sidebar/sidebar'
 import Navbar from '../navbar/navbar';
 
+import Style from './Layout.style'
+
 interface LayoutProp {
   children: React.ReactNode
   classes: any
   theme: Theme
 }
-
-const styles = (theme: Theme) => createStyles({
-  root: {
-    flexGrow: 1,
-    zIndex: 1,
-    height: '100vh',
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-  },
-  toolbar: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-});
 
 class Layout extends React.Component<LayoutProp> {
   state = {
@@ -77,4 +55,4 @@ class Layout extends React.Component<LayoutProp> {
   }
 }
 
-export default withStyles(styles)(Layout);
+export default Style(Layout)
