@@ -27,6 +27,7 @@
     "emotion-server": "9.2.6",
     "gatsby": "2.0.0-rc.8",
     "gatsby-plugin-emotion": "2.0.0-rc.1",
+    "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-jss": "2.0.2-rc.1",
     "gatsby-plugin-manifest": "2.0.2-rc.1",
     "gatsby-plugin-netlify-cms": "3.0.0-rc.1",
@@ -50,6 +51,10 @@
     "uuid": "3.3.2"
   },
   "devDependencies": {
+    "enzyme": "3.6.0",
+    "enzyme-adapter-react-16": "1.5.0",
+    "jest": "23.5.0",
+    "jest-enzyme": "6.0.4",
     "prettier": "1.14.2",
     "rimraf": "2.6.2"
   },
@@ -71,11 +76,14 @@
     "build": "yarn clean && gatsby build",
     "serve": "yarn build && gatsby serve",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "check": "yarn upgrade-interactive --latest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/kamontat/portfolio"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js"
   }
 }
