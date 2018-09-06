@@ -26,6 +26,4 @@ const styles = (theme: Theme) => createStyles({
   },
 })
 
-export default (container: React.ComponentClass) => {
-  return withStyles(styles, { withTheme: true })(container)
-}
+export default withStyles(styles, { withTheme: true })

@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
   branch: master
+slug:
+  encoding: ascii
+  clean_accents: true
+display_url: 'https://kamontat.space'
 media_folder: static/uploads/images
 public_folder: /uploads/images
 collections:

@@ -6,3 +6,7 @@ list:
     value: Add, Change, Delete dependencies
   - key: ui
     value: Create new UI, Update or Delete UI
+  - key: test
+    value: Testing management
+  - key: merge
+    value: Merge and resolve conflict
