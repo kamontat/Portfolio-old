@@ -1,6 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 
+import { Link } from 'gatsby'
+
 // Style
 import { Theme } from '@material-ui/core'
 import { withStyles, createStyles } from '@material-ui/core/styles'
@@ -11,7 +13,7 @@ import { Typography } from '@material-ui/core'
 import { IconButton } from '@material-ui/core'
 
 // Icon
-import { Brightness6, Menu } from '@material-ui/icons'
+import { Brightness6, Menu, Code } from '@material-ui/icons'
 
 interface NavbarProp {
   classes: any
@@ -66,6 +68,14 @@ class Navbar extends React.Component<NavbarProp> {
             className={classNames(classes.menuButton)}
           >
             <Brightness6 />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            className={classNames(classes.menuButton)}
+          >
+            <a href="/admin/#/" style={{ color: "inherit" }}>
+              <Code style={{ color: "inherit" }} />
+            </a>
           </IconButton>
           <IconButton
             color="inherit"
