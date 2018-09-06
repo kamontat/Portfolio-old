@@ -7,10 +7,12 @@
     "email": "kamontat.c@hotmail.com",
     "url": "http://kamontat.space"
   },
-  "contributors": [{
-    "name": "Natcha Triratchatchawan",
-    "email": "pprangnt.0512@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Natcha Triratchatchawan",
+      "email": "pprangnt.0512@gmail.com"
+    }
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.0-14",
     "@fortawesome/free-brands-svg-icons": "5.1.0-11",
@@ -41,6 +43,7 @@
     "parcel-bundler": "1.9.7",
     "prop-types": "15.6.2",
     "react": "16.4.2",
+    "react-bulma-components": "2.0.0",
     "react-dom": "16.4.2",
     "react-emotion": "9.2.6",
     "react-helmet": "5.2.0",

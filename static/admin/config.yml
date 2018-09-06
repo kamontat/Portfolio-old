@@ -1,14 +1,58 @@
 backend:
   name: git-gateway
   branch: master
+slug:
+  encoding: ascii
+  clean_accents: true
+display_url: 'https://kamontat.space'
 media_folder: static/uploads/images
 public_folder: /uploads/images
 collections:
-  - name: education
-    label: Education
+  - label: Information
+    name: informations
+    files:
+      - label: Personal information
+        name: profile
+        file: src/_personal/personal.yaml
+        editor:
+          preview: false
+        fields:
+          - label: Abbreviation
+            name: abbreviation
+            widget: string
+          - label: Profile Image
+            name: image
+            widget: image
+          - label: Name
+            name: name
+            widget: object
+            fields:
+              - label: First name
+                name: first-name
+                widget: string
+              - label: Last name
+                name: last-name
+                widget: string
+          - label: Email
+            name: email
+            widget: string
+          - label: Birthday
+            name: birthday
+            widget: date
+            format: DD-MMM-YYYY
+          - label: Address
+            name: address
+            widget: text
+          - label: Phone number
+            name: phone
+            widget: string
+  - label: Education
+    name: education
     folder: src/_personal/education
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{position}}'
+    editor:
+      preview: false
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}-{{position}}'
     fields:
       - label: School Name
         name: title

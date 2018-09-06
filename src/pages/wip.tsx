@@ -5,7 +5,7 @@ import AnnouncementLayout from '../components/announcement/announcement';
 import withRoot from '../withRoot';
 
 const Page404 = () => (
-  <AnnouncementLayout title="Page 404" subtitle="This path is not exist in this website" />
+  <AnnouncementLayout title="Coming soon" subtitle="Stay tune, work on progress." />
 )
 
 export default withRoot(Page404)
