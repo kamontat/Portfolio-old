@@ -3,7 +3,6 @@ import classNames from 'classnames'
 
 import { Link } from 'gatsby'
 
-
 import { Theme } from '@material-ui/core';
 
 import { AppBar, Toolbar } from '@material-ui/core';
