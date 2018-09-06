@@ -1,9 +1,7 @@
 import React, { MouseEvent } from 'react'
 import classNames from 'classnames'
 
-import { withStyles, createStyles } from '@material-ui/core/styles'
-
-import { Theme } from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles'
 
 import { Drawer } from '@material-ui/core'
 import { List, ListItem, ListItemIcon, ListItemText, Divider } from '@material-ui/core'
@@ -11,41 +9,13 @@ import { IconButton } from '@material-ui/core'
 
 import { ChevronLeft, Inbox, Drafts, Star, Mail, Send, Delete, Report } from '@material-ui/icons'
 
+import Style from './sidebar.style'
+
 interface SidebarProp {
   classes: any
-  width: number
   open: boolean
   onClose: (event: MouseEvent<HTMLElement>) => void
 }
-
-const styles = (theme: Theme) => createStyles({
-  drawerPaper: {
-    whiteSpace: 'nowrap',
-    width: 240,
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  drawerPaperClose: {
-    overflowX: 'hidden',
-    transition: theme.transitions.create('width', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    width: theme.spacing.unit * 7,
-    [theme.breakpoints.up('sm')]: {
-      width: theme.spacing.unit * 9,
-    },
-  },
-  toolbar: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-})
 
 class Sidebar extends React.Component<SidebarProp> {
   render() {
@@ -103,9 +73,9 @@ class Sidebar extends React.Component<SidebarProp> {
         <Divider />
         <List>
           {
-            section1.map(function (each) {
+            section1.map((each, index) => {
               return (
-                <ListItem button>
+                <ListItem key={"1" + index} button>
                   <ListItemIcon>
                     <each.icon />
                   </ListItemIcon>
@@ -118,9 +88,9 @@ class Sidebar extends React.Component<SidebarProp> {
         <Divider />
         <List>
           {
-            section2.map(function (each) {
+            section2.map((each, index) => {
               return (
-                <ListItem button>
+                <ListItem key={"2" + index} button>
                   <ListItemIcon>
                     <each.icon />
                   </ListItemIcon>
@@ -135,4 +105,4 @@ class Sidebar extends React.Component<SidebarProp> {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Sidebar)
+export default Style(Sidebar)

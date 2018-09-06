@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/layout/Layout'
+import withRoot from '../withRoot';
 
 const SecondPage = () => (
   <Layout>
@@ -11,4 +12,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default withRoot(SecondPage)

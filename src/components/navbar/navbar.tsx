@@ -1,32 +1,93 @@
 import React from 'react'
 import classNames from 'classnames'
-import { withStyles, createStyles } from '@material-ui/core/styles';
 
-import Drawer from '@material-ui/core/Drawer'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import List from '@material-ui/core/List'
-import Typography from '@material-ui/core/Typography'
-import Divider from '@material-ui/core/Divider'
-import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import { Link } from 'gatsby'
 
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import StarIcon from '@material-ui/icons/Star';
-import SendIcon from '@material-ui/icons/Send';
-import MailIcon from '@material-ui/icons/Mail';
-import DeleteIcon from '@material-ui/icons/Delete';
-import ReportIcon from '@material-ui/icons/Report';
+// Style
+import { Theme } from '@material-ui/core'
+import { withStyles, createStyles } from '@material-ui/core/styles'
 
-// import { Link } from 'gatsby'
-import styled from 'styled-components'
+// Element
+import { AppBar, Toolbar, Drawer } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
+import { IconButton } from '@material-ui/core'
 
-interface HeaderProp {
-  siteTitle: string
-  
+// Icon
+import { Brightness6, Menu, Code } from '@material-ui/icons'
+
+interface NavbarProp {
+  classes: any
+  open: boolean
+  onOpenSidebar: any
 }
+
+const drawerWidth = 240;
+
+const styles = (theme: Theme) => createStyles({
+  appBar: {
+    paddingLeft: 24,
+    zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    marginRight: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  hide: {
+    display: 'none',
+  },
+  menuButton: {
+    marginLeft: 12,
+    marginRight: 12,
+  },
+})
+
+class Navbar extends React.Component<NavbarProp> {
+  render() {
+    const { classes, open, onOpenSidebar } = this.props;
+
+    return (
+      <AppBar
+        position="fixed"
+        className={classNames(classes.appBar, open && classes.appBarShift)}
+      >
+        <Toolbar disableGutters={true}>
+          <Typography variant="title" color="inherit" style={{ flexGrow: 1 }} noWrap>
+            {/* <Link to="/" >KC</Link> */}
+            KC
+              </Typography>
+          <IconButton
+            color="inherit"
+            className={classNames(classes.menuButton)}
+          >
+            <Brightness6 />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            className={classNames(classes.menuButton)}
+          >
+            <a href="/admin/#/" style={{ color: "inherit" }}>
+              <Code style={{ color: "inherit" }} />
+            </a>
+          </IconButton>
+          <IconButton
+            color="inherit"
+            onClick={onOpenSidebar}
+            className={classNames(classes.menuButton, open && classes.hide)}
+          >
+            <Menu />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+    )
+  }
+}
+
+export default withStyles(styles)(Navbar)
