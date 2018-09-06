@@ -3,10 +3,6 @@ import classNames from 'classnames'
 
 import { Link } from 'gatsby'
 
-// Style
-import { Theme } from '@material-ui/core'
-import { withStyles, createStyles } from '@material-ui/core/styles'
-
 // Element
 import { AppBar, Toolbar, Drawer } from '@material-ui/core'
 import { Typography } from '@material-ui/core'
@@ -15,39 +11,13 @@ import { IconButton } from '@material-ui/core'
 // Icon
 import { Brightness6, Menu, Code } from '@material-ui/icons'
 
+import Style from './navbar.style'
+
 interface NavbarProp {
   classes: any
   open: boolean
   onOpenSidebar: any
 }
-
-const drawerWidth = 240;
-
-const styles = (theme: Theme) => createStyles({
-  appBar: {
-    paddingLeft: 24,
-    zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    marginRight: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['width', 'margin'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  hide: {
-    display: 'none',
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 12,
-  },
-})
 
 class Navbar extends React.Component<NavbarProp> {
   render() {
@@ -90,4 +60,4 @@ class Navbar extends React.Component<NavbarProp> {
   }
 }
 
-export default withStyles(styles)(Navbar)
+export default Style(Navbar)
