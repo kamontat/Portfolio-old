@@ -73,7 +73,7 @@
     "dev": "yarn develop",
     "start": "yarn develop",
     "start:verbose": "yarn develop --verbose",
-    "build": "yarn clean && gatsby build",
+    "build": "gatsby build",
     "serve": "yarn build && gatsby serve",
     "format": "prettier --write '**/*.js'",
     "test": "jest",
