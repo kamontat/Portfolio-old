@@ -17,3 +17,4 @@ jobs:
             - node_modules
           key: 'v1-dependencies-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}'
       - run: yarn test
+      - run: yarn build
