@@ -1,8 +1,3 @@
----
-name: Feature
-about: Create new feature with testing
----
-
 **Task** [*required]
 
 - [ ] Pass all previous test
