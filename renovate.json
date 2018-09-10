@@ -1,5 +1,12 @@
 {
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    "schedule:nonOfficeHours"
+  ],
+  "assignees": ["kamontat"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "baseBranches": ["dev"]
 }
