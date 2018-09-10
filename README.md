@@ -6,6 +6,13 @@
   <strong>This is my portfolio website.</strong><br>
   Using Gatsby and more dependencies to create awesome project like this.
 </p>
+
+<p align="center">
+  <a href="https://waffle.io/kamontat/Portfolio">
+    <img src="https://badge.waffle.io/kamontat/Portfolio.svg?columns=all&style=flat-square" alt="Waffle.io - Columns and their card count" />
+  </a>
+</p>
+
 <p align="center">
   <a href="https://github.com/kamontat/Portfolio">
     <img src="https://img.shields.io/github/package-json/v/kamontat/Portfolio.svg?style=flat-square" alt="GitHub package version" />
@@ -52,8 +59,6 @@
   <a href="#dependencies">Dependencies</a>
   <span> · </span>
   <a href="#usage">Usage</a>
-  <span> · </span>
-  <a href="https://app.zenhub.com/workspace/o/kamontat/portfolio">Zenhub</a>
   <span> · </span>
   <a href="https://kcntxwebport.slack.com">Slack</a>
 </h3>
