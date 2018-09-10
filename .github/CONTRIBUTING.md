@@ -1,4 +1,6 @@
-# How to CONTRIBUTE
+# Not accepted all pull request for unauthorized user
+
+## How to CONTRIBUTE
 
 - [How to CONTRIBUTE](#how-to-contribute)
   - [To create branch](#to-create-branch)
