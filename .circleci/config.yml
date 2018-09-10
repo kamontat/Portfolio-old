@@ -27,7 +27,7 @@ jobs:
             "yarn.lock" }}
       - run:
           name: Update lockfiles
-          command: greenkeeper-lockfile-update
+          command: $(yarn global bin)/greenkeeper-lockfile-update
       - run:
           name: Testing code
           command: yarn test
@@ -36,4 +36,4 @@ jobs:
           command: yarn build
       - run:
           name: Upload lockfiles
-          command: greenkeeper-lockfile-upload
+          command: $(yarn global bin)/greenkeeper-lockfile-upload
