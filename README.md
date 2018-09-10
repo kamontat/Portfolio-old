@@ -1,5 +1,5 @@
 <h1 align="center">
-  Portfolio project <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/kamontat/Portfolio.svg" alt="Greenkeeper badge" /></a>
+  Portfolio project
 </h1>
 
 <p align="center">
