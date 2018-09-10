@@ -1,5 +1,5 @@
 <h1 align="center">
-  Portfolio project <a href="https://greenkeeper.io/"><img src="https://badges.greenkeeper.io/kamontat/Portfolio.svg" alt="Greenkeeper badge" /></a>
+  Portfolio project
 </h1>
 
 <p align="center">
@@ -53,7 +53,7 @@
   <span> · </span>
   <a href="#usage">Usage</a>
   <span> · </span>
-  <a href="https://trello.com/knct">Trello</a>
+  <a href="https://app.zenhub.com/workspace/o/kamontat/portfolio">Zenhub</a>
   <span> · </span>
   <a href="https://kcntxwebport.slack.com">Slack</a>
 </h3>
