@@ -1734,7 +1734,7 @@ babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.4.0:
   dependencies:
     cosmiconfig "^5.0.5"
 
-babel-plugin-remove-graphql-queries@^2.0.2-rc.2:
+babel-plugin-remove-graphql-queries@^2.0.2-rc.3:
   version "2.0.2-rc.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.0.2-rc.3.tgz#82f8984e06585db4e8fe02caa68d03cec918fd57"
 
@@ -5044,9 +5044,9 @@ gatsby-plugin-netlify-cms@3.0.0-rc.1:
     netlify-identity-widget "^1.4.11"
     webpack "^4.16.0"
 
-gatsby-plugin-offline@2.0.0-rc.2:
-  version "2.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-rc.2.tgz#683231c4c85f1c95fa321f5fc6de329e2180ae1d"
+gatsby-plugin-offline@2.0.0-rc.6:
+  version "2.0.0-rc.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.0-rc.6.tgz#c54ecf6f7418b152b4184a23b49bef9b8642d6e5"
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
@@ -5072,20 +5072,20 @@ gatsby-plugin-react-helmet@3.0.0-rc.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-sass@2.0.0-rc.1:
-  version "2.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.0-rc.1.tgz#f649fea22a687b09b5435bcd65e4a1790ca5a549"
+gatsby-plugin-sass@2.0.0-rc.2:
+  version "2.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.0-rc.2.tgz#21478847d0060fb676fc707add21eb96948f24b6"
   dependencies:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-typescript@2.0.0-rc.3:
-  version "2.0.0-rc.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.0-rc.3.tgz#1258a3b8d3a3f995d0e263e17370e83dc903eb8d"
+gatsby-plugin-typescript@2.0.0-rc.5:
+  version "2.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.0.0-rc.5.tgz#d27b4d476fe24279c0e4f48b8ea5f67ffecbb0ae"
   dependencies:
     "@babel/preset-typescript" "^7.0.0"
     "@babel/runtime" "^7.0.0"
-    babel-plugin-remove-graphql-queries "^2.0.2-rc.2"
+    babel-plugin-remove-graphql-queries "^2.0.2-rc.3"
 
 gatsby-react-router-scroll@^2.0.0-rc.2:
   version "2.0.0-rc.2"
@@ -5095,9 +5095,9 @@ gatsby-react-router-scroll@^2.0.0-rc.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby@2.0.0-rc.8:
-  version "2.0.0-rc.8"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.8.tgz#f17e36fc542452c1bd1b13c88513ef26770b1ac4"
+gatsby@2.0.0-rc.15:
+  version "2.0.0-rc.15"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.0-rc.15.tgz#994ceabf049e0020fa799928d77658ab95cb0290"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5118,7 +5118,7 @@ gatsby@2.0.0-rc.8:
     babel-plugin-add-module-exports "^0.2.1"
     babel-plugin-dynamic-import-node "^1.2.0"
     babel-plugin-macros "^2.4.0"
-    babel-plugin-remove-graphql-queries "^2.0.2-rc.2"
+    babel-plugin-remove-graphql-queries "^2.0.2-rc.3"
     better-queue "^3.8.6"
     bluebird "^3.5.0"
     chalk "^2.3.2"
