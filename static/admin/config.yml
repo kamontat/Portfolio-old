@@ -19,7 +19,7 @@ collections:
     files:
       - label: Information
         name: information
-        file: src/_personal/personal.yaml
+        file: src/_personal/personal.yml
         editor:
           preview: false
         fields:
@@ -34,14 +34,15 @@ collections:
             widget: object
             fields:
               - label: First name
-                name: first-name
+                name: first_name
                 widget: string
               - label: Last name
-                name: last-name
+                name: last_name
                 widget: string
           - label: Nickname
             name: nickname
             widget: string
+            required: false
           - label: Email
             name: email
             widget: string
@@ -57,9 +58,39 @@ collections:
           - label: Phone number
             name: phone
             widget: string
+      - label: Extra Information
+        name: extra_information
+        file: src/_personal/extra-information.yml
+        editor:
+          preview: false
+        fields:
+          - label: Expected Job Position
+            name: expected_position
+            widget: string
+            required: false
+          - label: Current Job Position
+            name: current_position
+            widget: string
+            required: false
+          - label: Industry
+            name: industry
+            widget: string
+            required: false
+          - label: Quote
+            name: quote
+            widget: text
+            required: false
+          - label: Resume File
+            name: resume
+            widget: file
+            required: false
+          - label: CV File
+            name: cv
+            widget: file
+            required: false
       - label: Social Media
         name: social
-        file: src/_personal/social.yaml
+        file: src/_personal/social.yml
         editor:
           preview: false
         fields:
@@ -275,6 +306,12 @@ collections:
         name: link
         widget: string
         required: false
+      - label: Position
+        name: position
+        widget: number
+        valueType: int
+        required: false
+        default: 0
   - label: Languages
     name: languages
     folder: src/_personal/languages
@@ -284,13 +321,21 @@ collections:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - label: Code
-        name: code
-        widget: string
       - label: Name
+        name: name
+        widget: relation
+        hint: 'this textfield have selection list, but it might slow. calm down'
+        collection: locates
+        searchFields:
+          - title
+          - code
+        valueField: title
+        displayFields:
+          - title
+      - label: Name@1
         name: title
         widget: string
-        hint: should be same as column above
+        hint: 'cause by netlify convension, copy name and paste here'
       - label: Level
         name: level
         widget: select
@@ -330,9 +375,10 @@ collections:
             value: attitude
           - label: Functional
             value: functional
-      - label: Name
-        name: title
+      - label: Subtype
+        name: subtype
         widget: string
+        required: false
       - label: Name
         name: title
         widget: string
@@ -354,6 +400,22 @@ collections:
         valueType: int
         required: false
         default: 0
+  - label: Skill Tags
+    name: skill_tags
+    folder: src/_personal/tags/skills
+    create: true
+    extension: yml
+    editor:
+      preview: false
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - label: Name
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: string
+        required: false
   - label: Locates
     name: locates
     folder: src/_personal/locates
@@ -364,8 +426,8 @@ collections:
     slug: '{{slug}}'
     fields:
       - label: Code
-        name: title
+        name: code
         widget: string
       - label: Name
-        name: name
+        name: title
         widget: string
