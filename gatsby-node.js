@@ -11,11 +11,6 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, "src"), "node_modules"],
-    }
+    },
   })
-}
-
-exports.onCreateNode = ({ node, actions }) => {
-  const { createRedirect } = actions
-  createRedirect({ fromPath: '/admin', toPath: '/admin/', isPermanent: true })
 }

@@ -2,7 +2,8 @@ import React from 'react'
 
 import { Link } from 'gatsby';
 
-import { Typography, IconButton } from '@material-ui/core'
+import { Button, Icon } from 'antd';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faFacebookF, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -34,22 +35,22 @@ interface AnnounceProp {
 const SocialIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, text, link }) => (
   <Column style={{ minWidth: "70px" }}>
     <a href={link} target="_blank">
-      <IconButton color="inherit" aria-label={iconLabel}>
+      <Button type="primary" size="large" aria-label={iconLabel}>
         {children}
-      </IconButton>
+      </Button>
     </a>
-    <Typography>{text}</Typography>
+    <h4>{text}</h4>
   </Column>
 )
 
 const HomeIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, text, link }) => (
   <Column style={{ minWidth: "70px" }}>
     <Link to={link}>
-      <IconButton color="primary" aria-label={iconLabel}>
+      <Button type="primary" size="large" aria-label={iconLabel}>
         {children}
-      </IconButton>
+      </Button>
     </Link>
-    <Typography>{text}</Typography>
+    <h4>{text}</h4>
   </Column>
 )
 
@@ -57,9 +58,9 @@ const AnnouncementLayout: React.StatelessComponent<AnnounceProp> = ({ title, sub
   <Root>
     <CenterContainer>
       <InsideCenterContainer>
-        <Typography variant="display2" >{title}</Typography>
+        <h1>{title}</h1>
         <Shift />
-        <Typography variant="caption" >{subtitle}</Typography>
+        <small>{subtitle}</small>
 
         <Row>
           <SocialIcon
@@ -84,7 +85,7 @@ const AnnouncementLayout: React.StatelessComponent<AnnounceProp> = ({ title, sub
           </SocialIcon>
         </Row>
 
-        <Typography variant="caption" >K. Chantrachirathumrong</Typography>
+        <small>K. Chantrachirathumrong</small>
       </InsideCenterContainer>
     </CenterContainer>
   </Root>

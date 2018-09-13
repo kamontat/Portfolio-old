@@ -78,6 +78,11 @@ module.exports = {
     options: {
       precision: 8,
     },
+  }, {
+    resolve: `gatsby-plugin-typography`,
+    options: {
+      pathToConfigModule: `src/utils/typography.js`,
+    },
   },
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cms',
@@ -85,7 +90,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-jss',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
