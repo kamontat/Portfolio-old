@@ -132,6 +132,10 @@ collections:
           - label: Website url
             name: website
             widget: string
+            pattern:
+              - >-
+                https?:\/\/(www\\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+              - This must be fully url link
             hint: 'this should contains fully url (include http:// or https://)'
             required: false
   - label: Educations
@@ -198,6 +202,9 @@ collections:
         widget: number
         valueType: int
         required: false
+        pattern:
+          - '^[1-9]\d*'
+          - This must be position interger only
         default: 0
   - label: Experiences
     name: experiences
@@ -269,6 +276,9 @@ collections:
         widget: number
         valueType: int
         required: false
+        pattern:
+          - '^[1-9]\d*'
+          - This must be position interger only
         default: 0
   - label: Projects
     name: projects
@@ -306,11 +316,19 @@ collections:
         name: link
         widget: string
         required: false
+        pattern:
+          - >-
+            https?:\/\/(www\\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+          - This must be fully url link
+        hint: 'this should contains fully url (include http:// or https://)'
       - label: Position
         name: position
         widget: number
         valueType: int
         required: false
+        pattern:
+          - '^[1-9]\d*'
+          - This must be position interger only
         default: 0
   - label: Languages
     name: languages
@@ -355,6 +373,9 @@ collections:
         widget: number
         valueType: int
         required: false
+        pattern:
+          - '^[1-9]\d*'
+          - This must be position interger only
         default: 0
   - label: Skills
     name: skills
@@ -375,10 +396,13 @@ collections:
             value: attitude
           - label: Functional
             value: functional
-      - label: Subtype
-        name: subtype
-        widget: string
-        required: false
+      - label: Tags
+        name: tags
+        widget: list
+        field:
+          label: Tag
+          name: tag
+          widget: string
       - label: Name
         name: title
         widget: string
@@ -399,23 +423,10 @@ collections:
         widget: number
         valueType: int
         required: false
+        pattern:
+          - '^[1-9]\d*'
+          - This must be position interger only
         default: 0
-  - label: Skill Tags
-    name: skill_tags
-    folder: src/_personal/tags/skills
-    create: true
-    extension: yml
-    editor:
-      preview: false
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    fields:
-      - label: Name
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-        required: false
   - label: Locates
     name: locates
     folder: src/_personal/locates
