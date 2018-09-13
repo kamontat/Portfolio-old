@@ -13,8 +13,8 @@ options:
         - ui
   commit_groups:
     title_maps:
-      feature: Features
-      improve: Improving User Experience
+      feature: New Features
+      improve: 'Improvement, Usability and Performance'
       fix: Fixes Bug
       ui: Update frontend UX / UI
   header:
