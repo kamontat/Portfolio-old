@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: dev
+  commit_messages:
+    create: '[cms] Create {{collection}} {{slug}}'
+    update: '[cms] Update {{collection}} {{slug}}'
+    delete: '[cms] Delete {{collection}} {{slug}}'
+    uploadMedia: '[cms] Upload {{path}}'
+    deleteMedia: '[cms] Delete {{path}}'
 slug:
   encoding: ascii
   clean_accents: true
@@ -8,26 +14,11 @@ display_url: 'https://kamontat.space'
 media_folder: static/uploads/images
 public_folder: /uploads/images
 collections:
-  - label: Page Setting
-    name: setting
+  - label: Personal
+    name: personal
     files:
-      - label: Page Language
-        name: page
-        file: src/_personal/locate.yaml
-        editor:
-          preview: false
-        fields:
-          - label: Code
-            name: title
-            widget: string
-          - label: Name
-            name: name
-            widget: string
-  - label: Informations
-    name: information
-    files:
-      - label: Personal information
-        name: profile
+      - label: Information
+        name: information
         file: src/_personal/personal.yaml
         editor:
           preview: false
@@ -66,7 +57,7 @@ collections:
           - label: Phone number
             name: phone
             widget: string
-      - label: Personal social media
+      - label: Social Media
         name: social
         file: src/_personal/social.yaml
         editor:
@@ -113,9 +104,10 @@ collections:
             hint: 'this should contains fully url (include http:// or https://)'
             required: false
   - label: Educations
-    name: education
-    folder: src/_personal/education
+    name: educations
+    folder: src/_personal/educations
     create: true
+    extension: yml
     editor:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -132,6 +124,7 @@ collections:
       - label: GPAX
         name: gpax
         widget: object
+        hint: 'if select gpax as pass or fail, you didn''t need to add score textfield'
         fields:
           - label: Type
             name: type
@@ -175,10 +168,11 @@ collections:
         valueType: int
         required: false
         default: 0
-  - label: Experience
-    name: experience
-    folder: src/_personal/experience
+  - label: Experiences
+    name: experiences
+    folder: src/_personal/experiences
     create: true
+    extension: yml
     editor:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{hour}}-{{minute}}-{{second}}'
@@ -246,9 +240,10 @@ collections:
         required: false
         default: 0
   - label: Projects
-    name: project
-    folder: src/_personal/project
+    name: projects
+    folder: src/_personal/projects
     create: true
+    extension: yml
     editor:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -281,29 +276,46 @@ collections:
         widget: string
         required: false
   - label: Languages
-    name: language
-    folder: src/_personal/language
+    name: languages
+    folder: src/_personal/languages
     create: true
+    extension: yml
     editor:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
+      - label: Code
+        name: code
+        widget: string
       - label: Name
         name: title
         widget: string
+        hint: should be same as column above
       - label: Level
         name: level
         widget: select
         options:
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
+          - label: Elementary proficiency
+            value: 1
+          - label: Limited working proficiency
+            value: 2
+          - label: Professional working proficiency
+            value: 3
+          - label: Full professional proficiency
+            value: 4
+          - label: Native or bilingual proficiency
+            value: 5
+      - label: Position
+        name: position
+        widget: number
+        valueType: int
+        required: false
+        default: 0
   - label: Skills
-    name: skill
-    folder: src/_personal/skill
+    name: skills
+    folder: src/_personal/skills
     create: true
+    extension: yml
     editor:
       preview: false
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -321,13 +333,39 @@ collections:
       - label: Name
         name: title
         widget: string
+      - label: Name
+        name: title
+        widget: string
       - label: Level
         name: level
         widget: select
-        required: false
         options:
-          - 1
-          - 2
-          - 3
-          - 4
-          - 5
+          - label: Elementary proficiency
+            value: 1
+          - label: Limited working proficiency
+            value: 2
+          - label: Professional working proficiency
+            value: 3
+          - label: Full professional proficiency
+            value: 4
+      - label: Position
+        name: position
+        widget: number
+        valueType: int
+        required: false
+        default: 0
+  - label: Locates
+    name: locates
+    folder: src/_personal/locates
+    create: true
+    extension: yml
+    editor:
+      preview: false
+    slug: '{{slug}}'
+    fields:
+      - label: Code
+        name: title
+        widget: string
+      - label: Name
+        name: name
+        widget: string
