@@ -93,10 +93,12 @@ collections:
           - label: Resume File
             name: resume
             widget: file
+            default: /uploads/images/kamontat-resume.pdf
             required: false
           - label: CV File
             name: cv
             widget: file
+            default: /uploads/images/kamontat-cv.pdf
             required: false
       - label: Social Media
         name: social
