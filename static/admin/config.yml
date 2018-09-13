@@ -8,6 +8,21 @@ display_url: 'https://kamontat.space'
 media_folder: static/uploads/images
 public_folder: /uploads/images
 collections:
+  - label: Page Setting
+    name: setting
+    files:
+      - label: Page Language
+        name: page
+        file: src/_personal/locate.yaml
+        editor:
+          preview: false
+        fields:
+          - label: Code
+            name: title
+            widget: string
+          - label: Name
+            name: name
+            widget: string
   - label: Informations
     name: information
     files:
@@ -108,6 +123,9 @@ collections:
       - label: School Name
         name: title
         widget: string
+      - label: Short School Name
+        name: short
+        widget: string
       - label: Course Name
         name: course
         widget: string
@@ -143,9 +161,14 @@ collections:
             widget: date
             format: DD-MMM-YYYY
             required: false
-      - label: Certificate
-        name: certificate
-        widget: file
+      - label: Certificates
+        name: certificates
+        widget: list
+        field:
+          label: Certificate
+          name: certificate
+          widget: file
+        required: false
       - label: Position
         name: position
         widget: number
@@ -172,9 +195,14 @@ collections:
             value: parttime
           - label: Competition
             value: competition
-      - label: Image
-        name: image
-        widget: image
+      - label: Images
+        name: images
+        widget: list
+        field:
+          label: Image
+          name: image
+          widget: image
+        required: false
       - label: Title
         name: title
         widget: string
@@ -184,12 +212,19 @@ collections:
       - label: Detail
         name: detail
         widget: text
-      - label: Certificate
-        name: certificate
-        widget: file
+        required: false
+      - label: Certificates
+        name: certificates
+        widget: list
+        field:
+          label: Certificate
+          name: certificate
+          widget: file
+        required: false
       - label: Accomplish
         name: accomplish
         widget: text
+        required: false
       - label: Date
         name: date
         widget: object
