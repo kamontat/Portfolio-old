@@ -2,8 +2,6 @@ import React from 'react'
 
 import { Link } from 'gatsby';
 
-import { Button, Icon } from 'antd';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faFacebookF, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -18,7 +16,7 @@ import {
   Shift
 } from './announcement.style'
 
-import '../../styles/style.scss'
+// import './announcement.scss'
 
 interface SIProp {
   children: React.ReactNode
@@ -34,10 +32,8 @@ interface AnnounceProp {
 
 const SocialIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, text, link }) => (
   <Column style={{ minWidth: "70px" }}>
-    <a href={link} target="_blank">
-      <Button type="primary" size="large" aria-label={iconLabel}>
-        {children}
-      </Button>
+    <a href={link} className="icon is-large">
+      {children}
     </a>
     <h4>{text}</h4>
   </Column>
@@ -45,10 +41,8 @@ const SocialIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, tex
 
 const HomeIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, text, link }) => (
   <Column style={{ minWidth: "70px" }}>
-    <Link to={link}>
-      <Button type="primary" size="large" aria-label={iconLabel}>
-        {children}
-      </Button>
+    <Link to={link} className="icon is-large">
+      {children}
     </Link>
     <h4>{text}</h4>
   </Column>
@@ -67,21 +61,21 @@ const AnnouncementLayout: React.StatelessComponent<AnnounceProp> = ({ title, sub
             iconLabel="link to facebook"
             text="Facebook"
             link="https://facebook.com/kamontatc">
-            <FontAwesomeIcon color="#3B5998" icon={faFacebookF} />
+            <FontAwesomeIcon title="hello" color="#3B5998" icon={faFacebookF} size="3x" />
           </SocialIcon>
 
           <HomeIcon
             iconLabel="go to Home page"
             text="Home"
             link="/">
-            <FontAwesomeIcon icon={faHome} />
+            <FontAwesomeIcon icon={faHome} size="3x" />
           </HomeIcon>
 
           <SocialIcon
             iconLabel="go to Home page"
             text="Github"
             link="https://github.com/kamontat">
-            <FontAwesomeIcon color="#000" icon={faGithub} />
+            <FontAwesomeIcon color="#000" icon={faGithub} size="3x" />
           </SocialIcon>
         </Row>
 

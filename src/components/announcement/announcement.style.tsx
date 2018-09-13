@@ -19,8 +19,6 @@ bottom:0;
 right:0; 
 left:0;
 text-align: center;
-border-style: solid;
-border-width: 13px;
 `
 
 const InsideCenterContainer = styled('div')`
@@ -28,13 +26,12 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 margin:auto;
-border-style: dashed;
+border-style: solid;
 border-width: 2px;
 padding: 12px;
 min-height: 30% !important;
 min-width: 40% !important;
 `
-
 
 const Row = styled('div')`
 display:flex;
@@ -46,6 +43,7 @@ padding-bottom: 30px;
 const Column = styled('div')`
 display:flex;
 flex-direction: column;
+align-items: center;
 padding-left: 5px;
 padding-right: 5px;
 `

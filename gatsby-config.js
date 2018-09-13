@@ -78,11 +78,6 @@ module.exports = {
     options: {
       precision: 8,
     },
-  }, {
-    resolve: `gatsby-plugin-typography`,
-    options: {
-      pathToConfigModule: `src/utils/typography.js`,
-    },
   },
     'gatsby-plugin-netlify',
     'gatsby-plugin-netlify-cms',
