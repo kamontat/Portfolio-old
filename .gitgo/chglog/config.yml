@@ -1,0 +1,30 @@
+style: github
+template: CHANGELOG.tpl.md
+info:
+  title: CHANGELOG
+  repository_url: 'https://github.com/kamontat/Portfolio'
+options:
+  commits:
+    filters:
+      Type:
+        - feature
+        - improve
+        - fix
+        - ui
+  commit_groups:
+    title_maps:
+      feature: Features
+      improve: Improving User Experience
+      fix: Fixes Bug
+      ui: Update frontend UX / UI
+  header:
+    pattern: '^\[(\w*)\]\s(.*)$'
+    pattern_maps:
+      - Type
+      - Subject
+  issues:
+    prefix:
+      - '#'
+  notes:
+    keywords:
+      - BREAKING CHANGE
