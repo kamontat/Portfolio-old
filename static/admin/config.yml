@@ -213,8 +213,8 @@ collections:
         valueType: int
         required: false
         pattern:
-          - '^[1-9]\d*'
-          - This must be position interger only
+          - (\s*|\d+)
+          - This must be position interger or empty value only
         default: 0
   - label: Experiences
     name: experiences
@@ -251,10 +251,26 @@ collections:
       - label: Location
         name: location
         widget: string
-      - label: Detail
-        name: detail
+      - label: Location Link
+        name: location_link
+        widget: string
+        required: false
+        pattern:
+          - >-
+            https?:\/\/(www\\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+          - This must be fully url link
+      - label: Description
+        name: description
         widget: text
         required: false
+      - label: Accomplishes
+        name: accomplishes
+        widget: list
+        required: false
+        field:
+          label: On
+          name: on
+          widget: string
       - label: Certificates
         name: certificates
         widget: list
@@ -262,10 +278,6 @@ collections:
           label: Certificate
           name: certificate
           widget: file
-        required: false
-      - label: Accomplish
-        name: accomplish
-        widget: text
         required: false
       - label: Date
         name: date
@@ -287,8 +299,8 @@ collections:
         valueType: int
         required: false
         pattern:
-          - '^[1-9]\d*'
-          - This must be position interger only
+          - (\s*|\d+)
+          - This must be position interger or empty value only
         default: 0
   - label: Projects
     name: projects
@@ -337,8 +349,8 @@ collections:
         valueType: int
         required: false
         pattern:
-          - '^[1-9]\d*'
-          - This must be position interger only
+          - (\s*|\d+)
+          - This must be position interger or empty value only
         default: 0
   - label: Languages
     name: languages
@@ -384,8 +396,8 @@ collections:
         valueType: int
         required: false
         pattern:
-          - '^[1-9]\d*'
-          - This must be position interger only
+          - (\s*|\d+)
+          - This must be position interger or empty value only
         default: 0
   - label: Skills
     name: skills
@@ -434,8 +446,8 @@ collections:
         valueType: int
         required: false
         pattern:
-          - '^[1-9]\d*'
-          - This must be position interger only
+          - (\s*|\d+)
+          - This must be position interger or empty value only
         default: 0
   - label: Locates
     name: locates
