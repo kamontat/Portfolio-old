@@ -1,17 +1,11 @@
 import React from 'react'
-import classNames from 'classnames';
+import classNames from 'classnames'
 
-// import { Link } from 'gatsby'
+import withRoot from '../withRoot'
 
-import withRoot from '../withRoot';
+import './index.scss'
 
-import './index.scss';
-
-const Container = ({ children }) => (
-  <div>
-    {children}
-  </div>
-)
+const Container = ({ children }) => <div>{children}</div>
 
 const IndexPage = () => (
   <Container>

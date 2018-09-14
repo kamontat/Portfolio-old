@@ -7,10 +7,12 @@
     "email": "kamontat.c@hotmail.com",
     "url": "http://kamontat.space"
   },
-  "contributors": [{
-    "name": "Natcha Triratchatchawan",
-    "email": "pprangnt.0512@gmail.com"
-  }],
+  "contributors": [
+    {
+      "name": "Natcha Triratchatchawan",
+      "email": "pprangnt.0512@gmail.com"
+    }
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.4",
     "@fortawesome/free-brands-svg-icons": "5.3.1",
@@ -77,13 +79,7 @@
     "rimraf": "2.6.2",
     "webpack": "4.19.0"
   },
-  "keywords": [
-    "gatsby",
-    "react",
-    "website",
-    "personal",
-    "portfolio"
-  ],
+  "keywords": ["gatsby", "react", "website", "personal", "portfolio"],
   "license": "MIT",
   "scripts": {
     "clean": "rimraf .cache public",
@@ -94,7 +90,7 @@
     "start:verbose": "yarn develop --verbose",
     "build": "gatsby build",
     "serve": "yarn build && gatsby serve",
-    "format": "prettier --write '**/*.js'",
+    "format": "prettier --write '**/*.js' '**/*.ts' '**/*.tsx'",
     "test": "jest",
     "check:version": "yarn upgrade-interactive --latest --exact --emoji true"
   },

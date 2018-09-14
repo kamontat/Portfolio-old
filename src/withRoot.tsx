@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 import { Link, StaticQuery, graphql } from 'gatsby'
 
 import Head from './components/head/head'
 
-import "./styles/index.scss"
+import './styles/index.scss'
 
 interface WithRootProp {
   children: React.ReactNode
@@ -12,9 +12,8 @@ interface WithRootProp {
 
 function withRoot(Component) {
   class WithRoot extends React.Component<WithRootProp> {
-
     constructor(props) {
-      super(props);
+      super(props)
     }
 
     render() {
@@ -22,14 +21,14 @@ function withRoot(Component) {
       return (
         <StaticQuery
           query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
+            query SiteTitleQuery {
+              site {
+                siteMetadata {
+                  title
+                }
+              }
+            }
+          `}
           render={data => (
             <>
               <Head title={data.site.siteMetadata.title} />
@@ -37,10 +36,10 @@ function withRoot(Component) {
             </>
           )}
         />
-      );
+      )
     }
   }
-  return WithRoot;
+  return WithRoot
 }
 
-export default withRoot;
+export default withRoot

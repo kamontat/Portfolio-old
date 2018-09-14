@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import withRoot from '../withRoot';
+import withRoot from '../withRoot'
 
 const SecondPage = () => (
   <div>
