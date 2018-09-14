@@ -24,7 +24,7 @@
     "emotion": "9.2.8",
     "emotion-server": "9.2.8",
     "gatsby": "2.0.0-rc.24",
-    "gatsby-image": "^1.0.55",
+    "gatsby-image": "1.0.55",
     "gatsby-plugin-emotion": "2.0.0-rc.5",
     "gatsby-plugin-favicon": "3.1.4",
     "gatsby-plugin-google-analytics": "1.0.31",
