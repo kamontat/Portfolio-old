@@ -1,0 +1,45 @@
+$marginKey:       'has-margin';
+$paddingKey:      'has-padding';
+$separator:       '-';
+
+$positions: (
+  ('top', 'top'),
+  ('right', 'right'),
+  ('bottom', 'bottom'),
+  ('left', 'left')
+);
+
+$sizes: (
+  ('0', 0),
+  ('1', $util-space-1),
+  ('2', $util-space-2),
+  ('3', $util-space-3),
+  ('4', $util-space-4),
+  ('5', $util-space-5),
+);
+
+@each $size in $sizes {
+  $sizeKey: nth($size, 1);
+  $sizeValue: nth($size, 2);
+
+  .#{$marginKey}#{$separator}#{$sizeKey} {
+    margin: $sizeValue;
+  }
+
+  .#{$paddingKey}#{$separator}#{$sizeKey} {
+    padding: $sizeValue;
+  }
+
+  @each $position in $positions {
+    $posKey: nth($position, 1);
+    $posValue: nth($position, 2);
+
+    .#{$marginKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+      margin-#{$posValue}: $sizeValue;
+    }
+
+    .#{$paddingKey}#{$separator}#{$posKey}#{$separator}#{$sizeKey} {
+      padding-#{$posValue}: $sizeValue;
+    }
+  }
+}

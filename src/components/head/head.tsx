@@ -14,8 +14,6 @@ const Head: React.StatelessComponent<HeadProp> = ({ title }) => (
     ]}
   >
     <html lang="en" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"></link>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
   </Helmet>
 )
 

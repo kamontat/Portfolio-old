@@ -1,93 +1,72 @@
 import React from 'react'
+import classNames from 'classnames';
 
 import { Link } from 'gatsby';
 
-import { Typography, IconButton } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { faFacebookF, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
 
-import {
-  Root,
-  CenterContainer,
-  InsideCenterContainer,
-  Row,
-  Column,
-  Shift
-} from './announcement.style'
-
-import '../../styles/style.scss'
+import styles from './announcement.module.scss'
 
 interface SIProp {
   children: React.ReactNode
-  iconLabel: string
-  text: string
   link: string
 }
 
 interface AnnounceProp {
   title: string
   subtitle: string
+  detail: string
 }
 
-const SocialIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, text, link }) => (
-  <Column style={{ minWidth: "70px" }}>
-    <a href={link} target="_blank">
-      <IconButton color="inherit" aria-label={iconLabel}>
-        {children}
-      </IconButton>
+const SocialIcon: React.StatelessComponent<SIProp> = ({ children, link }) => (
+  <div className={styles.column}>
+    <a href={link} className="icon">
+      {children}
     </a>
-    <Typography>{text}</Typography>
-  </Column>
+  </div>
 )
 
-const HomeIcon: React.StatelessComponent<SIProp> = ({ children, iconLabel, text, link }) => (
-  <Column style={{ minWidth: "70px" }}>
-    <Link to={link}>
-      <IconButton color="primary" aria-label={iconLabel}>
-        {children}
-      </IconButton>
+const HomeIcon: React.StatelessComponent<SIProp> = ({ children, link }) => (
+  <div className={styles.column}>
+    <Link to={link} className="icon">
+      {children}
     </Link>
-    <Typography>{text}</Typography>
-  </Column>
+  </div>
 )
 
-const AnnouncementLayout: React.StatelessComponent<AnnounceProp> = ({ title, subtitle }) => (
-  <Root>
-    <CenterContainer>
-      <InsideCenterContainer>
-        <Typography variant="display2" >{title}</Typography>
-        <Shift />
-        <Typography variant="caption" >{subtitle}</Typography>
-
-        <Row>
+const AnnouncementLayout: React.StatelessComponent<AnnounceProp> = ({ title, subtitle, detail }) => (
+  <div className={styles.full}>
+    <div className={styles.container}>
+      <div className={styles.center}>
+        <h1 className="is-size-1">
+          <strong className={classNames("has-margin-right-2", styles.colorImprove)}>
+            {title}
+          </strong>
+          {subtitle}
+        </h1>
+        <span className="is-size-5">{detail}</span>
+        <div className={classNames(styles.row, "has-margin-bottom-2", "has-margin-top-4")}>
           <SocialIcon
-            iconLabel="link to facebook"
-            text="Facebook"
             link="https://facebook.com/kamontatc">
-            <FontAwesomeIcon color="#3B5998" icon={faFacebookF} />
+            <FontAwesomeIcon className={styles.colorImprove} icon={faFacebookF} size="2x" fixedWidth />
           </SocialIcon>
 
           <HomeIcon
-            iconLabel="go to Home page"
-            text="Home"
             link="/">
-            <FontAwesomeIcon icon={faHome} />
+            <FontAwesomeIcon className={styles.colorImprove} icon={faHome} size="2x" fixedWidth />
           </HomeIcon>
 
           <SocialIcon
-            iconLabel="go to Home page"
-            text="Github"
             link="https://github.com/kamontat">
-            <FontAwesomeIcon color="#000" icon={faGithub} />
+            <FontAwesomeIcon className={styles.colorImprove} icon={faGithub} size="2x" mask={['far', 'circle']} fixedWidth />
           </SocialIcon>
-        </Row>
-
-        <Typography variant="caption" >K. Chantrachirathumrong</Typography>
-      </InsideCenterContainer>
-    </CenterContainer>
-  </Root>
+        </div>
+        <small>K. Chantrachirathumrong</small>
+      </div>
+    </div>
+  </div>
 )
 
 export default AnnouncementLayout

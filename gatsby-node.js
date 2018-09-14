@@ -3,19 +3,3 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-
-const path = require('path')
-
-// You can delete this file if you're not using it
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, "src"), "node_modules"],
-    }
-  })
-}
-
-exports.onCreateNode = ({ node, actions }) => {
-  const { createRedirect } = actions
-  createRedirect({ fromPath: '/admin', toPath: '/admin/', isPermanent: true })
-}

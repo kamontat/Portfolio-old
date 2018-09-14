@@ -1,19 +1,24 @@
 import React from 'react'
-
-import Button from '@material-ui/core/Button'
+import classNames from 'classnames';
 
 // import { Link } from 'gatsby'
 
-import Layout from '../components/layout/Layout'
 import withRoot from '../withRoot';
 
+import './index.scss';
+
+const Container = ({ children }) => (
+  <div>
+    {children}
+  </div>
+)
+
 const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <Button variant="contained" color="primary" >
-      Hello World
-    </Button>
-  </Layout>
+  <Container>
+    <h1 className="is-size-1">Hello world</h1>
+    <span className="is-size-2">Hello world</span>
+    <p className="is-size-3">Hello world</p>
+  </Container>
 )
 
 export default withRoot(IndexPage)

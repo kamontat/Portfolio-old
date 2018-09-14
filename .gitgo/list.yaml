@@ -2,6 +2,8 @@ version: 2
 commits:
   - key: config
     value: Update project configuration
+  - key: ui
+    value: Update and change UX / UI page
   - key: lib
     value: 'Add, Change, Delete dependencies'
   - key: merge
