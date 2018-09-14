@@ -22,7 +22,7 @@
     "emotion": "9.2.8",
     "emotion-server": "9.2.8",
     "emotion-theming": "9.2.6",
-    "gatsby": "2.0.0-rc.21",
+    "gatsby": "2.0.0-rc.24",
     "gatsby-image": "1.0.55",
     "gatsby-plugin-emotion": "2.0.0-rc.5",
     "gatsby-plugin-favicon": "3.1.4",
@@ -31,12 +31,13 @@
     "gatsby-plugin-netlify": "2.0.0-rc.6",
     "gatsby-plugin-netlify-cache": "1.0.0-beta0",
     "gatsby-plugin-netlify-cms": "3.0.0-rc.5",
+    "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-offline": "2.0.0-rc.7",
     "gatsby-plugin-react-helmet": "3.0.0-rc.1",
     "gatsby-plugin-sass": "2.0.0-rc.2",
     "gatsby-plugin-sharp": "2.0.0-rc.7",
     "gatsby-plugin-sitemap": "2.0.0-rc.1",
-    "gatsby-plugin-typescript": "2.0.0-rc.5",
+    "gatsby-plugin-typescript": "2.0.0-rc.6",
     "gatsby-transformer-sharp": "2.1.1-rc.3",
     "mobx": "5.1.1",
     "mobx-react": "5.2.8",
@@ -52,6 +53,7 @@
     "react-dom": "16.5.0",
     "react-emotion": "9.2.8",
     "react-helmet": "5.2.0",
+    "typescript": "3.0.3",
     "uuid": "3.3.2"
   },
   "devDependencies": {
@@ -63,6 +65,7 @@
     "@babel/preset-flow": "7.0.0",
     "@babel/preset-react": "7.0.0",
     "@babel/preset-typescript": "7.0.0",
+    "@types/classnames": "2.2.6",
     "babel-eslint": "9.0.0",
     "enzyme": "3.6.0",
     "enzyme-adapter-react-16": "1.5.0",
@@ -80,7 +83,7 @@
     "jest-enzyme": "6.0.4",
     "prettier": "1.14.2",
     "rimraf": "2.6.2",
-    "webpack": "4.18.1"
+    "webpack": "4.19.0"
   },
   "keywords": [
     "gatsby",

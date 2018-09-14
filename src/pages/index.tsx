@@ -1,15 +1,24 @@
 import React from 'react'
+import classNames from 'classnames';
 
 // import { Link } from 'gatsby'
 
 import withRoot from '../withRoot';
 
-const IndexPage = () => (
+import './index.scss';
+
+const Container = ({ children }) => (
   <div>
+    {children}
+  </div>
+)
+
+const IndexPage = () => (
+  <Container>
     <h1 className="is-size-1">Hello world</h1>
     <span className="is-size-2">Hello world</span>
     <p className="is-size-3">Hello world</p>
-  </div>
+  </Container>
 )
 
 export default withRoot(IndexPage)

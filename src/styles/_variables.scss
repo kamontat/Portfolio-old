@@ -1,8 +1,24 @@
-@import '~bulma/sass/utilities/initial-variables.sass';
-
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
+// For space util
+$util-space-default:      1rem;
+$util-space-1:            $util-space-default * .25;
+$util-space-2:            $util-space-default * .5;
+$util-space-3:            $util-space-default;
+$util-space-4:            $util-space-default * 1.5;
+$util-space-5:            $util-space-default * 3;
+
 $primary:             #60C1E8;
+
+$white:               #FFFFFF;
+$black:               #111111;
+
+$light:               #EEEEEE;
+$dark:                #333000;
+
+$gray-light:          #C0C0C0;
+$gray-dark:           #696969;
+
 $family-primary:      "Poppins", "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
 
 $column-gap:          2.0rem;
