@@ -4,8 +4,6 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 
 import Head from './components/head/head'
 
-import './styles/index.scss'
-
 interface WithRootProp {
   children: React.ReactNode
 }
