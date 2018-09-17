@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import DevTools from 'mobx-react-devtools'
 
 import {Link, StaticQuery, graphql} from 'gatsby'
 
@@ -25,6 +24,7 @@ class WithRoot extends React.Component<WithRootProp> {
   }
 
   render() {
+    console.log(process.env.ENV)
     // MuiThemeProvider makes the theme available down the React tree thanks to React context.
     return (
       <StaticQuery
@@ -33,8 +33,6 @@ class WithRoot extends React.Component<WithRootProp> {
           <>
             <Head title={data.site.siteMetadata.title} />
             {this.props.children}
-
-            <DevTools />
           </>
         )}
       />
