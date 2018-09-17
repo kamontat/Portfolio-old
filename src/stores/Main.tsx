@@ -1,11 +1,29 @@
-import {observable} from 'mobx'
+import {observable, action} from 'mobx'
 
 class Main {
-  id = Math.random()
   @observable
-  title = ''
+  title = 'Hello world'
+
   @observable
-  finished = false
+  hamburger = false
+
+  @action.bound
+  updateTitle(title) {
+    this.title = title
+  }
+
+  @action.bound
+  toggleHamburger(status) {
+    this.hamburger = status
+  }
 }
 
-export default new Main()
+export default Main
+
+export interface MainProps {
+  main?: Main;
+}
+
+export interface MainStoreProps {
+  store?: Main;
+}

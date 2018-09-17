@@ -16,5 +16,6 @@ import Main from './src/stores/Main.tsx'
 configure({isolateGlobalState: true})
 
 export const wrapRootElement = ({element}) => {
-  return <Provider store={Main}>{element}</Provider>
+  const main = new Main()
+  return <Provider store={main}>{element}</Provider>
 }

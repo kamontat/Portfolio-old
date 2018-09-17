@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import DevTools from 'mobx-react-devtools'
 
 import {Link, StaticQuery, graphql} from 'gatsby'
 
@@ -32,6 +33,8 @@ class WithRoot extends React.Component<WithRootProp> {
           <>
             <Head title={data.site.siteMetadata.title} />
             {this.props.children}
+
+            <DevTools />
           </>
         )}
       />

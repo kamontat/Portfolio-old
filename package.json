@@ -75,6 +75,7 @@
     "eslint-plugin-standard": "4.0.0",
     "jest": "23.6.0",
     "jest-enzyme": "6.0.4",
+    "mobx-react-devtools": "^6.0.3",
     "prettier": "1.14.2",
     "regenerator-runtime": "0.12.1",
     "rimraf": "2.6.2",

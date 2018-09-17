@@ -1,8 +1,8 @@
 import React from 'react'
 
-import AnnouncementLayout from '../components/announcement/announcement'
+import AnnouncementLayout from '../../components/announcement/announcement'
 
-import withRoot from '../withRoot'
+import withRoot from '../../withRoot'
 
 const Page404 = () => (
   <AnnouncementLayout
