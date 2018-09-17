@@ -98,7 +98,7 @@
     "build": "gatsby build",
     "serve": "yarn build && gatsby serve",
     "format": "prettier --write '**/*.js' '**/*.ts' '**/*.tsx'",
-    "test": "jest",
+    "test": "jest --config ./jest.config.js",
     "check:version": "yarn upgrade-interactive --latest --exact --emoji true"
   },
   "repository": {
