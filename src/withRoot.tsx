@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Link, StaticQuery, graphql } from 'gatsby'
+import {Link, StaticQuery, graphql} from 'gatsby'
 
 import Head from './components/head/head'
 
 interface WithRootProp {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 function withRoot(Component) {

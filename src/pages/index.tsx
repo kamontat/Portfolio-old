@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import Layout from '../Layout'
+import Layout from '../templates/Layout'
 import withRoot from '../withRoot'
 
 const IndexPage = () => (

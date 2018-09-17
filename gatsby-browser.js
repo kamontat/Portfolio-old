@@ -5,3 +5,16 @@
  */
 
 // You can delete this file if you're not using it
+
+import React from 'react'
+
+import {configure} from 'mobx'
+import {Provider} from 'mobx-react'
+
+import Main from './src/stores/Main.tsx'
+
+configure({isolateGlobalState: true})
+
+export const wrapRootElement = ({element}) => {
+  return <Provider store={Main}>{element}</Provider>
+}
