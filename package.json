@@ -78,7 +78,7 @@
     "eslint-plugin-react": "7.11.1",
     "eslint-plugin-standard": "4.0.0",
     "jest": "23.6.0",
-    "jest-enzyme": "6.0.4",
+    "jest-enzyme": "6.1.2",
     "mobx-react-devtools": "6.0.3",
     "prettier": "1.14.3",
     "regenerator-runtime": "0.12.1",
