@@ -5830,9 +5830,9 @@ gatsby-plugin-manifest@2.0.4:
     bluebird "^3.5.0"
     sharp "^0.20.2"
 
-gatsby-plugin-netlify-cache@1.0.0-beta0:
-  version "1.0.0-beta0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cache/-/gatsby-plugin-netlify-cache-1.0.0-beta0.tgz#e2b0cbb53c0b7c45a5c1e5e3134f3cf5dfe82709"
+gatsby-plugin-netlify-cache@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cache/-/gatsby-plugin-netlify-cache-1.0.0.tgz#729bfae35800305e14bc098b9b2c095325cd74e2"
   dependencies:
     babel-runtime "^6.26.0"
     fs-extra "^7.0.0"
