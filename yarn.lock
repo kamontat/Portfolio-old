@@ -5802,9 +5802,9 @@ gatsby-cli@^2.4.3:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@2.0.14:
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.14.tgz#d3ad81888f970f3b7d2a0564ffab6e4f59756686"
+gatsby-image@2.0.15:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.15.tgz#16dec0f7ed2f8ec19d3de53931ea539054583dbb"
   dependencies:
     "@babel/runtime" "^7.0.0"
     prop-types "^15.6.1"
@@ -5919,9 +5919,9 @@ gatsby-plugin-sass@2.0.1:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.6.tgz#6d0b7e7102fcedbe8d0018e53d366018ebc84fdf"
+gatsby-plugin-sharp@2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.7.tgz#ee24e5ffdd52958deae84a18732dc3c36fddec27"
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
@@ -5962,9 +5962,9 @@ gatsby-react-router-scroll@^2.0.0:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-transformer-sharp@2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.1.3.tgz#9929919884e9edaab0179545c23d1cfc497c5070"
+gatsby-transformer-sharp@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.1.4.tgz#3d6dcd17440d605bd152f7fd59a479eee5199ade"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -5973,9 +5973,9 @@ gatsby-transformer-sharp@2.1.3:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.22:
-  version "2.0.22"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.22.tgz#bbce1efd2993705be91b2c06ace1bb1d2183976a"
+gatsby@2.0.24:
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.24.tgz#83231a0d11b4bac5f51327067afeab4f1307a4f6"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
