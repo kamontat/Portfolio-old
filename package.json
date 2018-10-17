@@ -84,7 +84,7 @@
     "regenerator-runtime": "0.12.1",
     "rimraf": "2.6.2",
     "ts-jest": "23.1.4",
-    "webpack": "4.20.2"
+    "webpack": "4.21.0"
   },
   "keywords": ["gatsby", "react", "website", "personal", "portfolio"],
   "license": "MIT",
