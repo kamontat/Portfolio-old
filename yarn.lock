@@ -5855,9 +5855,9 @@ gatsby-plugin-netlify-cache@1.0.0:
     babel-runtime "^6.26.0"
     fs-extra "^7.0.0"
 
-gatsby-plugin-netlify-cms@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.3.tgz#50e8171316188f61dd488ae20e12eb35151b4260"
+gatsby-plugin-netlify-cms@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.4.tgz#48800cc146af8323cd7cb7174ec0747deef37fc6"
   dependencies:
     friendly-errors-webpack-plugin "^1.7.0"
     html-webpack-exclude-assets-plugin "^0.0.7"
@@ -5973,9 +5973,9 @@ gatsby-transformer-sharp@2.1.4:
     probe-image-size "^4.0.0"
     sharp "^0.20.2"
 
-gatsby@2.0.25:
-  version "2.0.25"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.25.tgz#ec4ad24585a06b700b39fe81c197caf01f2e170d"
+gatsby@2.0.26:
+  version "2.0.26"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.0.26.tgz#3665011297bb0a0c403271359eefc180921ef4cb"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
