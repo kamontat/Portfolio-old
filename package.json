@@ -41,7 +41,7 @@
     "gatsby-plugin-sitemap": "2.0.1",
     "gatsby-plugin-typescript": "2.0.0",
     "gatsby-transformer-sharp": "2.1.4",
-    "mobx": "5.5.1",
+    "mobx": "5.5.2",
     "mobx-react": "5.3.4",
     "moment": "2.22.2",
     "netlify-cms": "2.1.3",
