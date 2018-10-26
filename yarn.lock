@@ -9283,9 +9283,9 @@ mobx-react-devtools@6.0.3:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/mobx-react-devtools/-/mobx-react-devtools-6.0.3.tgz#4d536c8cdd77d9f4b81f5e8415d7bedccc6a2a99"
 
-mobx-react@5.3.5:
-  version "5.3.5"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.3.5.tgz#749d15e569628e5b269b77d8f9e5e540b559e429"
+mobx-react@5.3.6:
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.3.6.tgz#0bead0173aed7d12ace4981b53c28db4d61de9ef"
   dependencies:
     hoist-non-react-statics "^3.0.0"
     react-lifecycles-compat "^3.0.2"
