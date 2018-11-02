@@ -65,30 +65,29 @@
 
 ## Languages
 
-1. Javascript: https://www.javascript.com
-2. Typescript: https://www.typescriptlang.org
-3. SASS/SCSS: https://sass-lang.com
+1. Javascript:      https://www.javascript.com
+2. Typescript:      https://www.typescriptlang.org
+3. SASS/SCSS:       https://sass-lang.com
+4. React:           https://reactjs.org
 
 ## Dependencies
 
-1. React: https://reactjs.org
-2. Gatsby: https://www.gatsbyjs.org
-3. Material UI: https://material-ui.com
-4. Netlify: https://www.netlify.com
-5. NetlifyCMS: https://www.netlifycms.org
-6. Emotion: https://github.com/emotion-js/emotion
-7. Mobx: https://github.com/mobxjs/mobx-react
-8. Bulma: https://bulma.io
+2. Mobx:            https://github.com/mobxjs/mobx-react
+3. Gatsby:          https://www.gatsbyjs.org
+4. Netlify:         https://www.netlify.com
+5. NetlifyCMS:      https://www.netlifycms.org
+6. Bulma:           https://bulma.io
+7. Emotion:         https://github.com/emotion-js/emotion
 
 ### Icons
 
-1. Material icon: https://material.io/tools/icons/?style=baseline
-2. Font Awesome: https://fontawesome.com/icons
+1. Material icon:   https://material.io/tools/icons/?style=baseline
+2. Font Awesome:    https://fontawesome.com/icons
 
 ### Testing
 
-1. jest: https://jestjs.io
-2. enzyme: https://github.com/airbnb/enzyme
+1. jest:            https://jestjs.io
+2. enzyme:          https://github.com/airbnb/enzyme
 
 ## Usage
 

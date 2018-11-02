@@ -1,12 +1,11 @@
 version: 2
-list:
+commits:
   - key: config
-    value: Update configuration
-  - key: lib
-    value: Add, Change, Delete dependencies
+    value: Update project configuration
   - key: ui
-    value: Create new UI, Update or Delete UI
-  - key: test
-    value: Testing management
+    value: Update and change UX / UI page
+  - key: lib
+    value: 'Add, Change, Delete dependencies'
   - key: merge
     value: Merge and resolve conflict
+branches: null

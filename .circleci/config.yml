@@ -16,9 +16,6 @@ jobs:
       - run:
           name: Install dependencies
           command: yarn install
-      - run:
-          name: Install greenkeeper lockfile version 1
-          command: yarn global add greenkeeper-lockfile@1
       - save_cache:
           paths:
             - node_modules
@@ -26,14 +23,8 @@ jobs:
             v1-dependencies-{{ checksum "package.json" }}-{{ checksum
             "yarn.lock" }}
       - run:
-          name: Update lockfiles
-          command: $(yarn global bin)/greenkeeper-lockfile-update
-      - run:
           name: Testing code
           command: yarn test
       - run:
           name: Build project
           command: yarn build
-      - run:
-          name: Upload lockfiles
-          command: $(yarn global bin)/greenkeeper-lockfile-upload
