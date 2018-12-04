@@ -44,7 +44,7 @@
     "mobx": "5.5.2",
     "mobx-react": "5.3.6",
     "moment": "2.22.2",
-    "netlify-cms": "2.1.3",
+    "netlify-cms": "2.3.0",
     "netlify-cms-lib-auth": "2.0.4",
     "netlify-cms-lib-util": "2.1.0",
     "netlify-cms-ui-default": "2.0.6",
